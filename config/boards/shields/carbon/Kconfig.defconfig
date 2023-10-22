@@ -1,6 +1,6 @@
 if SHIELD_CARBON_LEFT
 config ZMK_KEYBOARD_NAME
-    default "CARBON"
+    default "carbon"
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 endif
