@@ -13,8 +13,8 @@ combos {
             timeout-ms = <50>;
             key-positions = <61 70>;
             bindings = <&kp SPACE>;
-        }
-    }   
+        };
+    };   
     keymap {
         compatible = "zmk,keymap";
         default_layer {
