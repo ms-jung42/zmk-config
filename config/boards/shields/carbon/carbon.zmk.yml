@@ -3,7 +3,7 @@ id: carbon
 name: Carbon
 type: shield
 url: https://github.com/foostan/crkbd/
-requires: [seeeduino_xiao_ble]
+requires: [nice_nano_v2]
 features:
   - keys
 siblings:
