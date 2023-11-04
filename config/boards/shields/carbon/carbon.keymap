@@ -57,18 +57,17 @@ behaviors {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-
-&gre    &kp N1     &kp N2    &kp N3   &kp N4   &kp N5                         &kp N6     &kp N7    &kp N8   &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BACKSPACE
+&gre         &kp N1     &kp N2    &kp N3   &kp N4   &kp N5                         &kp N6     &kp N7    &kp N8   &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BACKSPACE
 &kp TAB      &kp Q      &kp W     &kp E    &kp R    &kp T                          &kp Y      &kp U     &kp I    &kp O      &kp P     &kp LBKT   &kp RBKT   &kp NUBS
 &kp CAPS     &kp A      &kp S     &kp D    &kp F    &kp G                          &kp H      &kp J     &kp K    &kp L      &kp SEMI  &kp SQT    &kp ENTER
-&bt LSHFT    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
+&kp LSHFT    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
 &kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &kp RIGHT        &kp BACKSPACE  &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
                                                     &kp LEFT    &kp LSHFT        &kp ENTER  &kp SPACE
             >;
         };
+
         nopad_layer {
             bindings = <
-
 &none     &trans     &trans    &trans     &trans   &trans                                 &kp N7     &kp N8    &kp N9   &kp MINUS     &kp PLUS    &none  &none  &kp BACKSPACE
 &trans    &trans     &kp UP    &none      &none    &none                                  &kp N4      &kp N5     &kp N6    &kp STAR      &kp EQUAL     &kp LBKT   &kp RBKT   &kp NUBS
 &none     &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none                                  &kp N1      &kp N2     &kp N3    &none     &none   &none    &kp ENTER
@@ -77,9 +76,9 @@ behaviors {
                                                    &kp LEFT    &kp LSHFT       &kp ENTER  &kp SPACE
             >;
         };
+        
         blue_layer {
             bindings = <
-
 &none   &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                            &none    &none   &none   &none    &none   &none   &none   &none
 &none     &none     &none    &none   &none   &none                                                           &none     &none    &none   &none   &none    &none   &none   &none
 &none    &bt BT_CLR     &none    &none   &none   &none                                                       &none     &none    &none   &none   &none   &none   &none
