@@ -56,14 +56,14 @@ behaviors {
     hrm_dot: jtodot {
             compatible = "zmk,behavior-tap-dance";
             label = "jtodot";
-            #binding-cells = <35>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp J>, <&kp DOT>;
         };
     hrm_com: ktocom {
             compatible = "zmk,behavior-tap-dance";
             label = "ktocom";
-            #binding-cells = <36>;
+            #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp K>, <&kp COMMA>;
         };    
