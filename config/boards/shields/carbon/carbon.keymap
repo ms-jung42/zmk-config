@@ -4,9 +4,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define NUM 1
-#define BLE 2
-#define NONE 0
 
 &mt {
     tapping-term-ms = <250>;
@@ -23,7 +20,7 @@ combos {
         combo_bt {
             timeout-ms = <50>;
             key-positions = <0 14>;
-            bindings = <&tog BLE>;
+            bindings = <&tog 2>;
         };
         combo_Rpara {
             timeout-ms = <50>;
@@ -43,7 +40,7 @@ combos {
         combo_num {
             timeout-ms = <50>;
             key-positions = <62 70>;
-            bindings = <&tog NUM>;
+            bindings = <&tog 1>;
         };
     };
 
@@ -69,28 +66,26 @@ behaviors {
                                                     &kp LEFT    &kp LSHFT        &kp ENTER  &kp SPACE
             >;
         };
-
-        NUM_layer {
+        nopad_layer {
             bindings = <
 
 &none     &trans     &trans    &trans     &trans   &trans                                 &kp N7     &kp N8    &kp N9   &kp MINUS     &kp PLUS    &none  &none  &kp BACKSPACE
 &trans    &trans     &kp UP    &none      &none    &none                                  &kp N4      &kp N5     &kp N6    &kp STAR      &kp EQUAL     &kp LBKT   &kp RBKT   &kp NUBS
 &none     &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none                                  &kp N1      &kp N2     &kp N3    &none     &none   &none    &kp ENTER
-&trans    &kp LANG2  &none     &none      &none    &none         &none         &kp LPAR      &kp N0     &kp RPAR    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
+&trans    &kp LANG2  &none     &none      &none    &none         &none            &kp LPAR      &kp N0     &kp RPAR    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
 &trans    &kp LWIN   &kp LALT                      &kp DELETE      &kp RIGHT     &kp BACKSPACE  &kp LANG1          &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
-                                                   &kp LEFT    &kp LSHFT     &kp ENTER  &kp SPACE
+                                                   &kp LEFT    &kp LSHFT       &kp ENTER  &kp SPACE
             >;
         };
-
-        BLE_layer {
+        blue_layer {
             bindings = <
 
 &none   &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                            &none    &none   &none   &none    &none   &none   &none   &none
-&none     &none     &none    &none   &none   &none                         &none     &none    &none   &none   &none    &none   &none   &none
-&none    &bt BT_CLR     &none    &none   &none   &none                         &none     &none    &none   &none   &none   &none   &none
-&none    &none   &none    &none   &none   &none               &none    &none     &none    &none   &none   &none   &none   &none    &none
-&none   &none    &none                     &none   &none              &none    &none                                      &none   &none   &none   &none
-                                                &none   &none        &none    &none
+&none     &none     &none    &none   &none   &none                                                           &none     &none    &none   &none   &none    &none   &none   &none
+&none    &bt BT_CLR     &none    &none   &none   &none                                                       &none     &none    &none   &none   &none   &none   &none
+&none    &none   &none    &none   &none   &none    &none                                              &none     &none    &none   &none   &none   &none   &none    &none
+&none   &none    &none                     &none   &none                                       &none    &none                                      &none   &none   &none   &none
+                                                &none   &none                                     &none    &none
 
             >;
         };
