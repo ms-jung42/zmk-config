@@ -6,7 +6,11 @@
 #define DEFAULT 0
 
 &mt {
-    tapping-term-ms = <250>;
+    tapping-term-ms = <200>;
+};
+
+&lt {
+    tapping-term-ms = <200>;
 };
 
 / { 
@@ -30,7 +34,7 @@ combos {
         combo_hash {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp HASH>;
+            bindings = <&hashdash>;
         };
         combo_Lpara {
             timeout-ms = <50>;
@@ -67,6 +71,13 @@ behaviors {
             tapping-term-ms = <200>;
             bindings = <&kp GRAVE>, <&kp ESC>;
         };
+    hashdash: tap_dance_mod_tap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "hashdash";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp HASH>, <&kp MINUS>;
+        };
     hrm_dot: jtodot {
             compatible = "zmk,behavior-tap-dance";
             label = "jtodot";
@@ -96,7 +107,7 @@ behaviors {
             bindings = <
 &gre         &kp N1     &kp N2    &kp N3   &kp N4   &kp N5                         &kp N6     &kp N7    &kp N8   &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BACKSPACE
 &kp TAB      &kp Q      &kp W     &kp E    &kp R    &kp T                          &kp Y      &kp U     &kp I    &kp O      &kp P     &kp LBKT   &kp RBKT   &kp NUBS
-&kp CAPS     &kp A      &kp S     &kp D    &ftolang    &kp G                          &kp H      &hrm_dot     &hrm_com    &kp L      &kp SEMI  &kp SQT    &kp ENTER
+&kp CAPS     &lt 3 A      &kp S     &kp D    &hrm_lang1    &kp G                          &kp H      &hrm_dot     &hrm_com    &kp L      &kp SEMI  &kp SQT    &kp ENTER
 &kp LSHFT    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
 &kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &mo 3        &kp ENTER  &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
                                                     &kp BACKSPACE     &mt SPACE LSHFT        &kp SPACE  &kp BACKSPACE
