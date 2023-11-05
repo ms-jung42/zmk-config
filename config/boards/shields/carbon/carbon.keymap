@@ -64,14 +64,14 @@ combos {
     };
 
 behaviors {
-    gre: tap_dance_mod_tap {
+    gre: grave_esc {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp GRAVE>, <&kp ESC>;
         };
-    hashdash: tap_dance_mod_tap {
+    hashdash: hash_dash {
             compatible = "zmk,behavior-tap-dance";
             label = "hashdash";
             #binding-cells = <0>;
@@ -107,7 +107,7 @@ behaviors {
             bindings = <
 &gre         &kp N1     &kp N2    &kp N3   &kp N4   &kp N5                         &kp N6     &kp N7    &kp N8   &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BACKSPACE
 &kp TAB      &kp Q      &kp W     &kp E    &kp R    &kp T                          &kp Y      &kp U     &kp I    &kp O      &kp P     &kp LBKT   &kp RBKT   &kp NUBS
-&kp CAPS     &lt 3 A      &kp S     &kp D    &hrm_lang1    &kp G                          &kp H      &hrm_dot     &hrm_com    &kp L      &kp SEMI  &kp SQT    &kp ENTER
+&kp LSHFT     &lt 3 A      &kp S     &kp D    &hrm_lang1    &kp G                          &kp H      &hrm_dot     &hrm_com    &kp L      &kp SEMI  &kp SQT    &kp ENTER
 &kp LSHFT    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
 &kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &mo 3        &kp ENTER  &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
                                                     &kp BACKSPACE     &mt SPACE LSHFT        &kp SPACE  &kp BACKSPACE
