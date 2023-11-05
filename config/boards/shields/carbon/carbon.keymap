@@ -52,7 +52,7 @@ combos {
             key-positions = <37 38>;
             bindings = <&kp ENTER>;
         };
-        hr_enter {
+        hr_bkps {
             timeout-ms = <50>;
             key-positions = <36 37>;
             bindings = <&kp BACKSPACE>;
