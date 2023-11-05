@@ -56,12 +56,22 @@ combos {
             key-positions = <37 38>;
             bindings = <&kp ENTER>;
         };
+        hr2_enter {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp ENTER>;
+        };
         hr_bkps {
             timeout-ms = <50>;
             key-positions = <36 37>;
             bindings = <&kp BACKSPACE>;
         };
-    };
+        hr_shft {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&sk LSHFT>;
+        };
+    };               
 
 behaviors {
     gre: grave_esc {
@@ -107,10 +117,10 @@ behaviors {
             bindings = <
 &gre         &kp N1     &kp N2    &kp N3   &kp N4   &kp N5                         &kp N6     &kp N7    &kp N8   &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BACKSPACE
 &kp TAB      &kp Q      &kp W     &kp E    &kp R    &kp T                          &kp Y      &kp U     &kp I    &kp O      &kp P     &kp LBKT   &kp RBKT   &kp NUBS
-&kp LSHFT     &lt 3 A      &kp S     &kp D    &hrm_lang1    &kp G                          &kp H      &hrm_dot     &hrm_com    &kp L      &kp SEMI  &kp SQT    &kp ENTER
-&kp LSHFT    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
+&kp LSHFT    &lt 3 A      &kp S     &kp D    &hrm_lang1    &kp G                          &kp H      &hrm_dot     &hrm_com    &kp L      &kp SEMI  &kp SQT    &kp ENTER
+&kp LCTRL    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
 &kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &mo 3        &kp ENTER  &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
-                                                    &kp BACKSPACE     &mt SPACE LSHFT        &kp SPACE  &kp BACKSPACE
+                                                    &kp BACKSPACE     &mt LSHFT SPACE        &kp SPACE  &kp BACKSPACE
             >;
         };
 
@@ -140,8 +150,8 @@ behaviors {
             bindings = <
 &gre         &kp N1     &kp N2    &kp N3   &kp N4   &kp N5                         &kp N6     &kp N7    &kp N8   &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp BACKSPACE
 &kp TAB      &kp Q      &kp W     &kp E    &kp R    &kp T                          &kp Y      &kp U     &kp UP    &kp O      &kp P     &kp LBKT   &kp RBKT   &kp NUBS
-&kp CAPS     &kp A      &kp S     &kp D    &kp F    &kp G                          &kp H      &kp LEFT     &kp DOWN    &kp RIGHT      &kp SEMI  &kp SQT    &kp ENTER
-&kp LSHFT    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
+&kp LSHFT     &kp A      &kp S     &kp D    &kp F    &kp G                          &kp H      &kp LEFT     &kp DOWN    &kp RIGHT      &kp SEMI  &kp SQT    &kp ENTER
+&kp LCTRL    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
 &kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &kp RIGHT        &kp ENTER  &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
                                                     &kp LEFT    &kp LSHFT        &kp SPACE  &kp BACKSPACE
             >;
