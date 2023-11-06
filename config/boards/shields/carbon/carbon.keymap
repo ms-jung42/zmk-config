@@ -6,7 +6,7 @@
 #define DEFAULT 0
 
 &mt {
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
 };
 
 &lt {
@@ -71,6 +71,11 @@ combos {
             key-positions = <18 19>;
             bindings = <&sk LSHFT>;
         };
+        hr_lang1 {
+            timeout-ms = <50>;
+            key-positions = <20 21>;
+            bindings = <&kp LANG1>;
+        };
     };               
 
 behaviors {
@@ -92,21 +97,21 @@ behaviors {
             compatible = "zmk,behavior-tap-dance";
             label = "hashdash";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp HASH>, <&kp MINUS>;
         };
     hrm_dot: jtodot {
             compatible = "zmk,behavior-tap-dance";
             label = "jtodot";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp J>, <&kp DOT>;
         };
     hrm_com: ktocom {
             compatible = "zmk,behavior-tap-dance";
             label = "ktocom";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp K>, <&kp COMMA>;
         };
     hrm_lang1: ftolang {
@@ -114,13 +119,13 @@ behaviors {
             label = "ftolang";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp F>, <&kp LANG1>;
+            bindings = <&kp H>, <&kp LANG1>;
         };    
     thumblang: thumblang {
             compatible = "zmk,behavior-mod-morph";
             label = "thumblang";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp LANG1>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <MOD_LSFT>;
         };   
     };
@@ -129,9 +134,9 @@ behaviors {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
-&gre         &kp N1     &kp N2    &kp N3   &kp N4   &kp N5                         &kp N6     &kp N7    &kp N8   &kp N9     &kp N0    &kp MINUS  &kp EQUAL  &kp DELETE
+&gre         &mt LS(N1) N1     &mt LS(N2) N2    &mt LS(N3) N3   &mt LS(N4) N4   &mt LS(N5) N5                         &mt LS(N6) N6     &mt LS(N7) N7    &mt LS(N8) N8   &mt LS(N9) N9     &mt LS(N0) N0    &mt LS(MINUS) MINUS  &mt LS(EQUAL) EQUAL  &kp DELETE
 &kp TAB      &kp Q      &kp W     &kp E    &kp R    &kp T                          &kp Y      &kp U     &kp I    &kp O      &kp P     &kp LBKT   &kp RBKT   &kp NUBS
-&kp LSHFT    &lt 3 A      &kp S     &kp D  &mt LANG1 F   &kp G                          &kp H      &hrm_dot     &hrm_com    &kp L      &kp SEMI  &kp SQT    &kp ENTER
+&kp LSHFT    &lt 3 A      &kp S     &kp D  &kp F   &mt LSHFT G                          &mt LSHFT H      &hrm_dot     &hrm_com    &kp L      &kp SEMI  &kp SQT    &kp ENTER
 &kp LCTRL    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
 &kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &enterspace    &thumblang &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
                                                     &kp BACKSPACE     &none        &kp SPACE  &kp BACKSPACE
