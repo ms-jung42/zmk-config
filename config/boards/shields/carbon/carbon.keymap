@@ -6,7 +6,7 @@
 #define DEFAULT 0
 
 &mt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <130>;
 };
 
 &lt {
@@ -73,7 +73,7 @@ combos {
         };
         hr_lang1 {
             timeout-ms = <50>;
-            key-positions = <20 21>;
+            key-positions = <21 22>;
             bindings = <&kp LANG1>;
         };
     };               
@@ -135,9 +135,9 @@ behaviors {
         default_layer {
             bindings = <
 &gre         &mt LS(N1) N1     &mt LS(N2) N2    &mt LS(N3) N3   &mt LS(N4) N4   &mt LS(N5) N5                         &mt LS(N6) N6     &mt LS(N7) N7    &mt LS(N8) N8   &mt LS(N9) N9     &mt LS(N0) N0    &mt LS(MINUS) MINUS  &mt LS(EQUAL) EQUAL  &kp DELETE
-&kp TAB      &kp Q      &kp W     &kp E    &kp R    &kp T                          &kp Y      &kp U     &kp I    &kp O      &kp P     &kp LBKT   &kp RBKT   &kp NUBS
-&kp LSHFT    &lt 3 A      &kp S     &kp D  &kp F   &mt LSHFT G                          &mt LSHFT H      &hrm_dot     &hrm_com    &kp L      &kp SEMI  &kp SQT    &kp ENTER
-&kp LCTRL    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
+&kp TAB      &mt LS(Q) Q     &mt LS(W) W     &mt LS(E) E     &mt LS(R) R     &mt LS(T) T                           &kp Y      &kp U     &kp I    &mt LS(O) O      &mt LS(P) P      &mt LS(LBKT)  LBKT    &mt LS(RBKT) RBKT  &kp NUBS
+&kp LSHFT    &lt 3 A      &kp S     &kp D  &kp F   &mt LSHFT G                          &mt LSHFT H      &hrm_dot     &hrm_com    &kp L      &mt LS(SEMI) SEMI   &kp SQT    &kp ENTER
+&kp LCTRL    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &mt LS(SLASH) SLASH   &kp UP     &kp RSHFT
 &kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &enterspace    &thumblang &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
                                                     &kp BACKSPACE     &none        &kp SPACE  &kp BACKSPACE
             >;
