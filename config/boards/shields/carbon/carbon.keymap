@@ -96,7 +96,14 @@ behaviors {
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&mt SPACE>, <&kp ENTER>;
+            bindings = <&spaceback>, <&kp ENTER>;
+        };
+    spaceback: spaceback {
+            compatible = "zmk,behavior-mod-morph";
+            label = "spaceback";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&mt LC(BACKSPACE) BACKSPACE>;
+            mods = <MOD_LSFT>;
         };
     hashdash: hash_dash {
             compatible = "zmk,behavior-tap-dance";
