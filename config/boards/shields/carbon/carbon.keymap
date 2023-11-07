@@ -144,7 +144,7 @@ behaviors {
             compatible = "zmk,behavior-hold-tap";
             label = "hotab";
             #binding-cells = <2>;
-            flavor = "tab-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
