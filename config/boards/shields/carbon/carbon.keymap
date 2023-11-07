@@ -6,7 +6,7 @@
 #define DEFAULT 0
 
 &mt {
-    tapping-term-ms = <130>;
+    tapping-term-ms = <140>;
 };
 
 &lt {
@@ -43,8 +43,8 @@ combos {
         };
         combo_num {
             timeout-ms = <50>;
-            key-positions = <62 70>;
-            bindings = <&tog 1>;
+            key-positions = <30 31>;
+            bindings = <&to 1>;
         };
         hr_space {
             timeout-ms = <50>;
@@ -64,7 +64,7 @@ combos {
         hr_bkps {
             timeout-ms = <50>;
             key-positions = <36 37>;
-            bindings = <&kp BACKSPACE>;
+            bindings = <&thumblang>;
         };
         hr_shft {
             timeout-ms = <50>;
@@ -76,6 +76,11 @@ combos {
             key-positions = <21 22>;
             bindings = <&kp LANG1>;
         };
+        hr2_lang1 {
+            timeout-ms = <50>;
+            key-positions = <36 61>;
+            bindings = <&kp LANG1>;
+        };
     };               
 
 behaviors {
@@ -84,14 +89,14 @@ behaviors {
             label = "TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp GRAVE>, <&kp ESC>;
+            bindings = <&mt LS(GRAVE) GRAVE>, <&kp ESC>;
         };
     enterspace: enterspace {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOD_TAP";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mt LEFT_SHIFT SPACE>, <&kp ENTER>;
+            tapping-term-ms = <150>;
+            bindings = <&mt SPACE>, <&kp ENTER>;
         };
     hashdash: hash_dash {
             compatible = "zmk,behavior-tap-dance";
@@ -135,22 +140,23 @@ behaviors {
         default_layer {
             bindings = <
 &gre         &mt LS(N1) N1     &mt LS(N2) N2    &mt LS(N3) N3   &mt LS(N4) N4   &mt LS(N5) N5                         &mt LS(N6) N6     &mt LS(N7) N7    &mt LS(N8) N8   &mt LS(N9) N9     &mt LS(N0) N0    &mt LS(MINUS) MINUS  &mt LS(EQUAL) EQUAL  &kp DELETE
-&kp TAB      &mt LS(Q) Q     &mt LS(W) W     &mt LS(E) E     &mt LS(R) R     &mt LS(T) T                           &kp Y      &kp U     &kp I    &mt LS(O) O      &mt LS(P) P      &mt LS(LBKT)  LBKT    &mt LS(RBKT) RBKT  &kp NUBS
-&kp LSHFT    &lt 3 A      &kp S     &kp D  &kp F   &mt LSHFT G                          &mt LSHFT H      &hrm_dot     &hrm_com    &kp L      &mt LS(SEMI) SEMI   &kp SQT    &kp ENTER
+&kp TAB      &kp Q     &kp W     &kp E     &kp R     &kp T                           &kp Y      &kp U     &kp I    &kp O      &kp P      &mt LS(LBKT)  LBKT    &mt LS(RBKT) RBKT  &kp NUBS
+&kp LSHFT    &lt 3 A      &kp S     &kp D  &kp F   &kp G                          &kp H      &hrm_dot     &hrm_com    &kp L      &mt LS(SEMI) SEMI   &kp SQT    &kp ENTER
 &kp LCTRL    &kp LANG2  &kp Z     &kp X    &kp C    &kp V         &kp B         &kp B      &kp N     &kp M    &kp COMMA  &kp DOT   &mt LS(SLASH) SLASH   &kp UP     &kp RSHFT
-&kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &enterspace    &thumblang &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
+&kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &kp LSHFT    &enterspace &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
                                                     &kp BACKSPACE     &none        &kp SPACE  &kp BACKSPACE
             >;
         };
 
         nopad_layer {
             bindings = <
-&none     &trans     &trans    &trans     &trans   &trans                                 &kp N7     &kp N8    &kp N9   &kp MINUS     &kp PLUS    &none  &none  &kp BACKSPACE
-&trans    &trans     &kp UP    &none      &none    &none                                  &kp N4      &kp N5     &kp N6    &kp STAR      &kp EQUAL     &kp LBKT   &kp RBKT   &kp NUBS
-&none     &kp LEFT   &kp DOWN  &kp RIGHT  &none    &none                                  &kp N1      &kp N2     &kp N3    &none     &none   &none    &kp ENTER
-&trans    &kp LANG2  &none     &none      &none    &none         &none            &kp LPAR      &kp N0     &kp RPAR    &kp COMMA  &kp DOT   &kp SLASH  &kp UP     &kp RSHFT
-&trans    &kp LWIN   &kp LALT                      &kp DELETE      &kp RIGHT     &kp ENTER  &kp LANG1          &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
-                                                   &kp LEFT    &kp LSHFT       &kp SPACE  &kp BACKSPACE
+&none     &none     &none     &none    &none   &none                                                     &none    &none   &none   &none    &none   &none   &none   &none
+&none     &none     &none    &none   &none   &none                                                           &kp N5     &kp N6  &kp N7 &kp N8   &kp N9    &none   &none   &none
+&none    &none     &none    &none   &none   &none                                                       &kp N0    &kp N1    &kp N2   &kp N3   &kp N4   &none   &none
+&kp LCTRL    &kp LANG2  &none     &none     &none    &none   &none   &none   &kp MINUS  &kp EQUAL   &kp COMMA  &kp DOT   &mt LS(SLASH) SLASH   &kp UP     &kp RSHFT
+&kp LCTRL    &kp LWIN   &kp LALT                    &kp DELETE      &kp LSHFT    &enterspace &kp LANG1         &kp RALT   &kp LEFT  &kp DOWN   &kp RIGHT
+                                                    &kp BACKSPACE     &none        &kp SPACE  &kp BACKSPACE
+
             >;
         };
 
